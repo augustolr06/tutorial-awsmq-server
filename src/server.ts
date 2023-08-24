@@ -1,18 +1,7 @@
-import express, { Request, Response } from "express";
 import amqp from "amqplib";
 import dotenv from "dotenv";
 
-const app = express();
-const port = 3000;
 dotenv.config();
-
-app.get("/", (req: Request, res: Response) => {
-  res.send("Hello World!");
-});
-
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
-});
 
 async function connect() {
   try {
