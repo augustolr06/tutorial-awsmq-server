@@ -6,7 +6,9 @@
   "scripts": {
     "start": "ts-node-dev --respawn --transpileOnly ./src/server.ts",
     "build": "tsc",
-    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts"
+    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts",
+    "send": "ts-node-dev --transpile-only --ignore-watch node_modules src/send.ts",
+    "receive": "ts-node-dev --transpile-only --ignore-watch node_modules src/receive.ts"
   },
   "devDependencies": {
     "@types/amqplib": "^0.10.1",

@@ -4,5 +4,6 @@ declare namespace NodeJS {
     AMAZON_MQ_PORT: string;
     AMAZON_MQ_USERNAME: string;
     AMAZON_MQ_PASSWORD: string;
+    AMAZON_MQ_COMPLETE_URL: string;
   }
 }

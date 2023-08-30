@@ -7,7 +7,7 @@ dotenv.config();
 
 async function connect() {
   try {
-    amqp.connect(
+    await amqp.connect(
       {
         hostname: process.env.AMAZON_MQ_ENDPOINT,
         port: parseInt(process.env.AMAZON_MQ_PORT),
@@ -40,7 +40,10 @@ async function connect() {
           ch1.assertQueue(queue);
 
           setInterval(() => {
-            ch1.sendToQueue(queue, Buffer.from("something to do"));
+            ch1.sendToQueue(
+              queue,
+              Buffer.from(`Message from date: ${Date.now()}`)
+            );
           }, 1000);
         });
       }
